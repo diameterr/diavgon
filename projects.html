@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Diameter</title>
+  <link rel="stylesheet" href="proj.css">
+
+</head>
+
+<body>
+<center>
+  <div>
+
+    <div class="box">
+      <img class="icon" src="orangecube.png">
+      <h1> Projects v24</h1>
+    </div>
+  </div>
+  <hr>
+<div>
+  <p> The following are projects, you may view each 
+    project by utilizing the history element buttons provided below.
+  </p></div>
+<!-- slideshow container -->
+<div class="slideshow-container">
+  <!-- First Project-->
+  <div class="mySlides fade row bounce">
+    <div class="column"> 
+      <img src="tankbotcadrender.png" width="500px"> 
+    </div>
+    <div class="column">
+      <h1 id="left" class="hbot">Raphael the Tank Bot</h1>
+      <p id="left">Date Published: 1/10/2024</p>
+      <p id="left"> "Raphael" was a combat robot designed to fight in the 1lb combat robotics 
+        competition "Design.Print.Destroy" at the University of Illinois at Urbana Champaign.
+        Tank treads are unconventional in the combat robotics scence, which made this project 
+        fun way to explore different drive trains. Upon the left, you are able to see
+        the concept of the Tank bot using CAD for its design. 
+      </p>
+      <p id="left"> "Raphael" was a combat robot designed to fight in the 1lb combat robotics 
+        competition "Design.Print.Destroy" at the University of Illinois at Urbana Champaign.
+        Tank treads are unconventional in the combat robotics scence, which made this project 
+        fun way to explore different drive trains. Upon the left, you are able to see
+        the concept of the Tank bot using CAD for its design. 
+      </p>
+      <p id="left"> "Raphael" was a combat robot designed to fight in the 1lb combat robotics 
+        competition "Design.Print.Destroy" at the University of Illinois at Urbana Champaign.
+        Tank treads are unconventional in the combat robotics scence, which made this project 
+        fun way to explore different drive trains. Upon the left, you are able to see
+        the concept of the Tank bot using CAD for its design. 
+      </p>
+      <span id="dots">...</span><span id="more">
+        here is the rest of the information that is hidden within this article.
+      </span>
+      <button onclick="readmore()" id="myBtn">Read more</button>
+    </div>
+  </div>
+
+  <!-- Second Project-->
+  <div class="mySlides fade bounce">
+    <img src="garfwalker.png">
+  </div>
+
+  <!-- Third Project-->
+  <div class="mySlides fade bounce">
+    <img src="me2.png">
+  </div>
+
+<!-- button class-->
+ <div class="sticks">
+    <button class="timeline prev" onclick="plusSlides(-2)">
+      <img class="arrows" src="tlarrowL.png">
+    </button>
+    <button class="timeline prev" onclick="plusSlides(-1)">
+      <img class="arrows" src="tlarrowL2.png">
+    </button>
+    <button class="timeline">
+      <img class="arrows" src="tlmid.png">
+    </button>
+    <button  class="timeline next" onclick="plusSlides(1)">
+      <img class="arrows" src="tlarrowR2.png">
+    </button>
+    <button  class="timeline next"onclick="plusSlides(2)">
+      <img class="arrows" src="tlarrowR1.png">
+    </button>
+
+  </div>
+</div>
+</center>
+<br>
+<hr>
+ <div class="botmform">
+  <br>
+  <h1 class="hbot"> Statement from Diane</h2>
+  <p> This page illustrates different projects and their current stages. Please keep in mind for 
+    the best viewing experience utilize a computer rather than a mobile device. Currently
+  this website does not have mobile support. Below is a menu with various projects and dates
+associated if you wish to not use the carousel feature. Clicking on said project will take you
+to the associated project information and 'article'. </p>
+<br>
+<h1 class="hobt"> 2024 Projects</h1>
+<p> No projects currently listed!</p>
+
+<br>
+<h1 class="hobt"> 2023 Projects</h1>
+<p> No projects currently listed!</p>
+
+<br>
+<h1 class="hobt"> 2022 Projects</h1>
+<p> No projects currently listed!</p>
+
+<button onclick="topFunction(2)">clickme!</button>
+</div>
+<br><br><br><br><br>
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+
+  function displaySlide(n){
+    showSlides(slideIndex = n)
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop=0;
+  }
+
+  function topFunction(n){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop=0;
+    showSlides(slideIndex = n)
+  }
+
+
+  function readmore() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+  </script>
+  
+
+
+
+</body>
+</html>

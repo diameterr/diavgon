@@ -1,0 +1,105 @@
+#left{ text-align: left;}
+
+#left2{float:left;}
+
+#more{display:none}
+
+h1 {
+    font-family: 'Verdana';
+    font-size: 20px;
+    color: rgb(60,60,60);
+  }
+
+
+
+.box{
+    width:300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(228, 228, 228, 0.712);
+    border-radius: 5px;
+}
+
+.timeline{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    width: fit-content;
+}
+
+.icon{
+    width:20px;
+    height:auto;
+    padding-right: 10px;
+}
+.arrows{
+    width:30px;
+    height:auto;
+}
+
+.arrows:hover{
+   transform: translateY(-5px);
+}
+
+/* Animation */
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.bounce{
+    animation: bounce 0.6s
+  }
+
+@keyframes fade {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+@keyframes bounce{
+    0%,20%,,80%,100% {
+      transform:translateY(0);
+    }
+    50% {
+      transform:translateY(-10px);
+    }
+   
+  }
+
+
+.column {
+    float: left;
+    width: 45%;
+    outline: 5px green;
+  }
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  
+  }
+
+.sticks{
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+
+}
+
+.botmform{
+    margin-left: 20%;
+    margin-right: 20%;
+
+}
+
+.hbot{
+    margin-bottom: -10px;
+}
+
+
