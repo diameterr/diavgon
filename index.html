@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Diameter</title>
+  <title>DiavGon</title>
   <link rel="stylesheet" href="diamcss.css">
   <link rel="icon" type="image" href="favicon-32x32.png">
   
@@ -20,32 +20,30 @@
     <img id="imgid" class="toplogos" src= "toplogo.png" alt="Diameter">
     
      <h1 class="topnag"> 
-        <img class="icons"src="leftarrow.png" width="20">
+        <img id="toggleCollapse" class="dropdown"src="leftarrow.png" width="20">
         Diane V. G.</h1>
      
 
 
 
-<div class="buttons">
-        <button class="btms" onmouseenter="changeScr5()" onmouseleave="changeScr2()">
-            <img class="icons" src="foldericon.png">
-    
-            <a href="http://127.0.0.1:5500/projects.html">Projects</a>
-        </button>
+<div id="buttonContainer" class="buttons visible">
+    <button class="btms" onmouseenter="changeScr5()" onmouseleave="changeScr2()" onclick="location.href = 'https://www.google.com'">
+            <img class="icons" src="foldericon.png"> 
+            <span class="blocktext">Projects</span>
+    </button>
 
-    <button class="btms" onmouseenter="changeScr()" onmouseleave="changeScr2()">
+    <button class="btms" onmouseenter="changeScr()" onmouseleave="changeScr2()" onclick="location.href = 'https://www.google.com'">
         <img class="icons" src="fileicon.png">
-
-        <a href="https://diameter.neocities.org/">Resume</a>
+        <span class="blocktext">Resume</span>
     </button>
-    <button class="btms" onmouseenter="changeScr4()" onmouseleave="changeScr2()">
+    <button class="btms" onmouseenter="changeScr4()" onmouseleave="changeScr2()" onclick="location.href = 'https://www.google.com'">
         <img class="icons" src="eyeicon.png">
-        <a href="https://diameter.neocities.org/">Contact</a>
+        <span class="blocktext">Contact</span>
     </button>
     
-    <button class="btms" onmouseenter="changeScr3()" onmouseleave="changeScr2()">
+    <button class="btms" onmouseenter="changeScr3()" onmouseleave="changeScr2()" onclick="location.href = 'https://www.google.com'"> 
         <img class="icons" src="settingicon.png">
-        <a href="https://diameter.neocities.org/">About</a>
+        <span class="blocktext">About</span>
 
     </button>
  </div>
